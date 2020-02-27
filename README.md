@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It was built out following the tutorial at https://css-tricks.com/finite-state-machines-with-react/.
+
 ## Available Scripts
 
 In the project directory, you can run:
