@@ -48,7 +48,6 @@ class App extends React.Component {
       (state, action) => this.command(action, event) || state,
       undefined,
     );
-    console.log("What is the next state for the transition?", nextState);
     this.setState({
       authState: nextAuthState.value,
       ...nextState,
@@ -56,12 +55,10 @@ class App extends React.Component {
   }
 
   command(action, event) {
-    console.log("We are processing this action and event:", action, event);
     // Note: The original article used `switch (action) {`, but I found I had to
     // change it to `switch (action.type) {` to get this to work.
     switch (action.type) {
       case 'setUser':
-        console.log("here's the event...", event);
         if (event.username) {
           return { user: { name: event.username } };
         }
@@ -71,7 +68,6 @@ class App extends React.Component {
           user: {},
         };
       case 'error':
-        console.log("we ran into an error event...", event);
         if (event.error) {
           return {
             error: event.error,
