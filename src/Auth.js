@@ -5,3 +5,5 @@ const Auth = React.createContext({
   logout: () => { },
   user: {},
 });
+
+export default Auth;
